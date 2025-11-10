@@ -12,16 +12,15 @@ class Movie
         Movie(const std::string& title, 
             const std::string& genre, 
             int year, 
-            const std:: string& director, 
-            const std:: string& synopsis, 
+            const std:: string& director,
             const std:: vector<std::string>& actors);
          
-            
+        virtual ~Movie(){}
+         
         std:: string getTitle() const;
         std:: string getGenre() const;
         int getYear() const;
         std::string getDirector() const;
-        std::string getSynopsis() const;
         std::vector<std::string> getActors() const; 
 
         virtual std::string getRatingString() const;
@@ -33,7 +32,6 @@ class Movie
             std::string genre;
             int year;
             std::string director;
-            std:: string synopsis;
             std::vector<std::string> actors;
 
 };
@@ -45,7 +43,6 @@ class watchedMovie: public Movie
                     const std::string& genre,
                     int year, 
                     const std::string& director,
-                    const std::string& synopsis,
                     const std::vector<std::string>& actors, 
                     float rating);
         
